@@ -13,7 +13,7 @@ LS301-DLC-ESP-A
 #include <BridgeClient.h>
 #include <Process.h>
 #include <YunClient.h>
-#include <YunServer.h>
+#include <BridgeServer.h>
 
 
 #define DEBUG 1
