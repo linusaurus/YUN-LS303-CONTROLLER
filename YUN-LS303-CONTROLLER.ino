@@ -5,6 +5,7 @@ MQTT client LIFT_SLIDE Motor Controller
 Master Controller
 r.young 
 8.29.2017 vB, v3[9.5.2017] v4[9.7.2017] v5[3.1.2018]
+v6[6-11-2018]
 LS301-DLC-ESP-A
 */
 
