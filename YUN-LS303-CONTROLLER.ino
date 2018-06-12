@@ -42,7 +42,7 @@ int OpenRelayPin =   2;
 int CloseRelayPin =  3;
 int StopRelayPin =   4;
 int UnlockRelayPin = 5;
-//int PowerPin = 6;
+//int PowerPin =     6; // Not used
 int ClutchPin      = 6; // changed to match new harness ry
 int StatusPIN = 8;
 //--------------------------------
