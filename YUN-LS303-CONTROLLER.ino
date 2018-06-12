@@ -12,7 +12,7 @@ LS301-DLC-ESP-A
 #include <Bridge.h>
 #include <BridgeClient.h>
 #include <Process.h>
-#include <YunClient.h>
+#include <BridgeClient.h>
 #include <BridgeServer.h>
 
 
@@ -22,7 +22,7 @@ LS301-DLC-ESP-A
 #include <PubSubClient.h>
 #include <EEPROM.h>
 
-YunClient yunClient;
+BridgeClient yunClient;
 PubSubClient client(yunClient);
 
 long lastMsg = 0;
