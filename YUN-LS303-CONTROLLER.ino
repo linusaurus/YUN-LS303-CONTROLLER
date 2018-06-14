@@ -16,7 +16,7 @@ LS301-DLC-ESP-A
 #include <BridgeServer.h>
 
 
-#define DEBUG 1
+#define DEBUG 
 //#define WRITE_MEM
 
 #include <PubSubClient.h>
@@ -61,7 +61,7 @@ unsigned long     TIME_START_VAL;
 volatile boolean  TIMED_OUT_FLAG = true; 
 unsigned long     RELAY_DURATION = 850; 
 
-const char* MQTT_CLIENT_ID = "LS301CTL";
+const char* MQTT_CLIENT_ID = "LS303CTL";
 const char* outTopic = "DLIN";
 const char* inTopic = "LSCMD";
 const char* statusTopic = "STATUS";
@@ -228,9 +228,7 @@ void setup() {
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
   
-  #ifdef DEBUG
- 
-  #endif
+  
   statusLED.trigger(statusLED.EVT_BLINK);
  
 }
@@ -288,7 +286,9 @@ if(STATE==0){
     
   }
 if(STATE==1 && !IN_OPEN_MODE && !DOORS_RISING){ 
+  #ifdef DEBUG
   Serial.println("Send DLIN=1");  
+  #endif
   client.publish(outTopic,"1" );
   DOORS_RISING=true;
   }
